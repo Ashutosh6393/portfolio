@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
+  --dark-bg: #0d0d0c;
   --primary: #090908;
   --secondary: #e8e8e3;
   --gray-1: #393632;
@@ -8,6 +9,7 @@
   --gray-3: #2e2e2b;
   --gray-4: #756e64;
   --gray-5: #d8d8d2;
+  --main-heading: 6rem;
 }
 
 * {
@@ -30,6 +32,26 @@ body {
   width: 100%;
   height: 100vh;
   padding-inline: 10rem;
+}
+
+.main-heading {
+  color: var(--secondary);
+  font-size: var(--main-heading);
+}
+
+.circle {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: rgb(220, 220, 211);
+  background: linear-gradient(
+    180deg,
+    rgba(220, 220, 211, 1) 0%,
+    rgba(232, 232, 227, 1) 100%
+  );
+  border-radius: 50%;
+  top: -50%;
+  z-index: 1;
 }
 
 /* -----page 1 css start ------ */
@@ -67,7 +89,7 @@ body {
     bottom: 0;
     width: 5rem;
     height: 5rem;
-    background-color: #D1D1C7;
+    background-color: #d1d1c7;
     border-radius: 50%;
   }
 }
@@ -97,7 +119,6 @@ nav {
   gap: 0.5rem;
 
   & li h3 {
-
     font-weight: 600;
     color: var(--gray-1);
   }
@@ -138,19 +159,357 @@ nav {
   }
 }
 
-.circle {
+/* ------ page 1 css end ------ */
+
+/* -----page 2 css start ------ */
+
+#page2 {
+  background-color: var(--dark-bg);
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding-top: 4rem;
+}
+
+#page2-content {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  & p {
+    position: absolute;
+    display: inline-block;
+    z-index: 3;
+    width: 45%;
+    font-size: 1.8rem;
+    color: var(--gray-4);
+    bottom: -9%;
+    right: 8%;
+    text-wrap: pretty;
+    font-weight: 500;
+  }
+}
+.rounded-rectangle {
   position: absolute;
-  width: 50rem;
-  height: 50rem;
-  background: rgb(220, 220, 211);
-  background: linear-gradient(
-    180deg,
-    rgba(220, 220, 211, 1) 0%,
-    rgba(232, 232, 227, 1) 100%
-  );
-  border-radius: 50%;
-  top: -50%;
+  width: 55rem;
+  height: 25rem;
+  border-radius: 20rem;
+  background-color: var(--gray-3);
+  border: 4rem solid var(--gray-2);
   z-index: 1;
 }
 
-/* ------ page 1 css end ------ */
+#display-photo {
+  width: 35rem;
+  height: 45rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 3;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(105%);
+    z-index: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(222, 222, 213);
+  background: linear-gradient(
+    180deg,
+    rgba(222, 222, 213, 0.0032387955182072714) 42%,
+    rgba(0, 0, 0, 0.939) 100%
+  );
+  z-index: 2;
+}
+
+/* ------ page2 css end ------ */
+
+/* -----page 3 css start ------ */
+
+#page3 {
+  height: auto;
+  padding-bottom: 4rem;
+  padding-top: 8rem;
+  background-color: var(--dark-bg);
+}
+
+.work {
+  margin-top: 2rem;
+  border-top: 1px solid var(--gray-4);
+  padding-block: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & h2 {
+    color: var(--secondary);
+    font-size: 5rem;
+  }
+}
+
+.work-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-content-left {
+  width: 40%;
+  & p {
+    padding-block: 4rem;
+    font-size: 1.5rem;
+    color: var(--gray-4);
+  }
+}
+
+.work-content-right {
+  position: relative;
+  width: 40%;
+  & ul {
+    list-style-type: none;
+    text-align: right;
+    & li {
+      font-size: 3rem;
+      color: var(--secondary);
+    }
+  }
+  & p {
+    font-size: 15rem;
+    position: absolute;
+    font-weight: 900;
+    bottom: -5rem;
+    left: 0;
+    opacity: 30%;
+  }
+}
+
+/* ------ page3 css end ------ */
+
+/* -----page 4 css start ------ */
+
+#page4 {
+  /* min-height: auto; */
+  height: auto;
+  background-color: var(--dark-bg);
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+
+#project {
+  border-top: 1px solid var(--gray-4);
+  margin-top: 2rem;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-top,
+.project-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  height: 100vh;
+}
+.project-top-left,
+.project-bottom-right {
+  height: 100%;
+  width: 50%;
+
+}
+
+.project-top-right,
+.project-bottom-left{
+  height: 70%;
+  width: 40%;
+}
+
+.project-card-big-image{
+  height: 90%;
+  width: 100%;
+  background-color: #756e64;
+  border-radius: .8rem;
+}
+
+.project-card-big-content{
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h3{
+    color: var(--gray-5);
+    font-size: 2.5rem;
+  }
+}
+
+.project-card-tile-container{
+  padding-inline: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content:center;
+  align-items: center;
+}
+
+.tile-big{
+  padding-inline: 1.5rem ;
+  padding-block: .7rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 5rem;
+}
+
+.tile-small{
+  padding-inline: 1.1rem ;
+  padding-block: .3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 5rem;
+}
+
+.tile-dark{
+  color: var(--gray-4);
+  border: 1px solid var(--gray-4);
+  background-color: var(--dark-bg);
+}
+
+.tile-light{
+  background-color: var(--gray-5);
+  border: 1px solid var(--gray-5);
+
+}
+
+.project-card-small-image{
+  height: 90%;
+  width: 100%;
+  background-color: #756e64;
+  border-radius: .8rem;
+}
+
+.project-card-small-content{
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h3{
+    color: var(--gray-5);
+    font-size: 1.8rem;
+  }
+}
+
+/* ------page4 css end ------ */
+
+/* ------page5 css start------ */
+
+#page5{
+  height: auto;
+  padding-block: 4rem;
+  & >h1{
+    color: var(--gray-1);
+  }
+}
+
+#page5-content{
+  margin-top: 2rem;
+  border-top: 1px solid var(--gray-1);
+  padding-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.skill-card{
+  background-color: #d1d1c7;
+  padding-block: 4rem;
+  padding-inline: 2rem ;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+
+  & h2{
+    font-size: 3rem;
+    color: var(--gray-3);
+  }
+}
+
+.skill-card-data{
+  padding-block: 2rem;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  row-gap: .7rem;
+}
+
+.skill-tile{
+  padding-inline: 1.5rem ;
+  padding-block: .7rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 5rem;
+}
+
+.skill-tile-dark{
+  color: var(--secondary);
+  border: 1px solid var(--gray-3);
+  background-color: var(--gray-3);
+}
+
+.skill-tile-light{
+  color: var(--gray-3);
+  border: 1px solid var(--gray-3);
+  background-color: var(--secondary);
+}
+
+.skill-card-circle1, .skill-card-circle2{
+  border-radius: 50%;
+  position: absolute;
+
+}
+
+.skill-card-circle1{
+  height: 35rem;
+  width: 35rem;
+  background-color: #b1b1ac89;
+  right: -10%;
+  top: 20%;
+}
+.skill-card-circle2{
+  height: 35rem;
+  width: 35rem;
+  background-color: #b1b1acc8;
+  right: -20%;
+  top: -10%;
+}
+
+
+/* ------page5 css end------ */
+
+footer{
+  padding-block: 4rem ;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-circle{
+  top: 50%;
+}
+
+
+#footer-top{
+  z-index: 2;
+}

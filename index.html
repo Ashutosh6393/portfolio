@@ -1,44 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="loader"></div>
     <div id="main">
-        <div id="cursor"></div>
-        <div id="page1" class="page">
-            <nav>
-                <div id="logo">
-                    <div id="logo-circle-1"></div>
-                    <div id="logo-circle-2"></div>
+      <div id="cursor"></div>
+      <div id="page1" class="page">
+        <nav>
+          <div id="logo">
+            <div id="logo-circle-1"></div>
+            <div id="logo-circle-2"></div>
+          </div>
+          <div id="nav-right">
+            <h3>AVAILABLE FOR WORK MARCH 2024</h3>
+            <ul id="navigation-menu">
+              <li><h3>About</h3></li>
+              <li><h3>Work</h3></li>
+              <li><h3>Projects</h3></li>
+              <li><h3>What I know</h3></li>
+              <li><h3>Get In Touch</h3></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="page1-content">
+          <h1>HI THERE, I'M</h1>
+          <h1>ASHUTOSH</h1>
+          <p>
+            Freelance Full-stack web developer bringing your vision to life.
+          </p>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div id="page2" class="page">
+        <h1 class="main-heading">ABOUT ME.</h1>
+        <div id="page2-content">
+          <div class="rounded-rectangle"></div>
+          <div id="display-photo">
+            <div class="overlay"></div>
+            <img src="images/me.webp" alt="proflie photo" />
+          </div>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I can craft dynamic
+            and engaging web experiences for startups and businesses using the
+            MERN stack. I specialize in building responsive websites with
+            seamless animations powered by GSAP, ensuring a captivating user
+            experience on any device.
+          </p>
+        </div>
+      </div>
+      <div id="page3" class="page">
+        <h1 class="main-heading">WHAT I DO.</h1>
+        <div id="page3-content">
+          <div class="work">
+            <h2>* Frontend</h2>
+            <div class="work-content">
+              <div class="work-content-left">
+                <p>
+                  I craft unique and engaging user experiences through
+                  custom-coded websites. I prioritize responsiveness to ensure
+                  flawless display across all devices, and leverage SEO best
+                  practices to boost your online visibility. Furthermore, I
+                  integrate captivating motion and animations powered by GSAP,
+                  keeping your visitors intrigued and enhancing brand recall.
+                </p>
+              </div>
+              <div class="work-content-right">
+                <ul>
+                  <li>Motion & animations</li>
+                  <li>SEO</li>
+                  <li>GSAP</li>
+                  <li>Responsive</li>
+                </ul>
+                <p>01.</p>
+              </div>
+            </div>
+          </div>
+          <div class="work">
+            <h2>* Backend</h2>
+            <div class="work-content">
+              <div class="work-content-left">
+                <p>
+                  I power the engine behind your web applications. I specialize
+                  in building robust backend systems using Node.js and MongoDB.
+                  This includes crafting secure APIs for seamless data exchange,
+                  developing server-side logic to handle complex tasks, and
+                  meticulously managing databases to ensure efficient data
+                  storage and retrieval.
+                </p>
+              </div>
+              <div class="work-content-right">
+                <ul>
+                  <li>API integration</li>
+                  <li>DBMS</li>
+                  <li>Server-side Development</li>
+                  <li>Security</li>
+                </ul>
+                <p>02.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page4" class="page">
+        <h1 class="main-heading">SELECTED PROJECTS</h1>
+            <div id="page4-content">
+                <div id="project">
+                    <div class="project-top">
+                        <div class="project-top-left project-card-big">
+                            <div class="project-card-big-image"></div>
+                            <div class="project-card-big-content">
+                                <h3>Project 1</h3>
+                                <div class="project-card-tile-container">
+                                    <p class="tile-big tile-dark">Development</p>
+                                    <p class="tile-big tile-light">2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-top-right project-card-small">
+                            <div class="project-card-small-image"></div>
+                            <div class="project-card-small-content">
+                                <h3>Project 2</h3>
+                                <div class="project-card-tile-container">
+                                    <p class="tile-small tile-dark">Development</p>
+                                    <p class="tile-small tile-light">2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-bottom">
+                        <div class="project-bottom-left project-card-small">
+                            <div class="project-card-small-image"></div>
+                            <div class="project-card-small-content">
+                                <h3>Project 3</h3>
+                                <div class="project-card-tile-container">
+                                    <p class="tile-small tile-dark">Development</p>
+                                    <p class="tile-small tile-light">2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-bottom-right project-card-big">
+                            <div class="project-card-big-image"></div>
+                            <div class="project-card-big-content">
+                                <h3>Project 4</h3>
+                                <div class="project-card-tile-container">
+                                    <p class="tile-big tile-dark">Development</p>
+                                    <p class="tile-big tile-light">2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="nav-right">
-                    <h3>AVAILABLE FOR WORK MARCH 2024</h3>
-                    <ul id="navigation-menu">
-                        <li><h3>About</h3></li>
-                        <li><h3>Work</h3></li>
-                        <li><h3>Projects</h3></li>
-                        <li><h3>What I know</h3></li>
-                        <li><h3>Get In Touch</h3></li>
-                    </ul>
+            </div>
+      </div>
+      <div id="page5" class="page">
+        <h1 class="main-heading">WHAT I KNOW.</h1>
+        <div id="page5-content">
+            <div class="skill-card">
+                <h2>Frontend</h2>
+                <div class="skill-card-data">
+                    <p class="skill-tile skill-tile-light">HTML</p>
+                    <p class="skill-tile skill-tile-dark">Javascript</p>
+                    <p class="skill-tile skill-tile-light">CSS</p>
+                    <p class="skill-tile skill-tile-dark">Bootstrap</p>
+                    <p class="skill-tile skill-tile-light">Tailwind CSS</p>
+                    <p class="skill-tile skill-tile-dark">React JS</p>
+                    <p class="skill-tile skill-tile-light">GSAP</p>
                 </div>
-            </nav>
-            <div id="page1-content">
-                <h1>HI THERE, I'M</h1>
-                <h1>ASHUTOSH</h1>
-                <p>Freelance Full-stack web developer bringing your vision to life.</p>
-                <div class="circle"></div>
+                <div class="skill-card-circle1"></div>
+                <div class="skill-card-circle2"></div>
+            </div>
+            <div class="skill-card">
+                <h2>Backend</h2>
+                <div class="skill-card-data">
+                    <p class="skill-tile skill-tile-light">Node JS</p>
+                    <p class="skill-tile skill-tile-dark">Express JS</p>
+                    <p class="skill-tile skill-tile-light">Appwrite</p>
+                    <p class="skill-tile skill-tile-dark">FireBase</p>
+                </div>
+                <div class="skill-card-circle1"></div>
+                <div class="skill-card-circle2"></div>
+            </div>
+            <div class="skill-card">
+                <h2>Database</h2>
+                <div class="skill-card-data">
+                    <p class="skill-tile skill-tile-light">MongoDB</p>
+                    <p class="skill-tile skill-tile-dark">MySQL</p>
+         
+                </div>
+                <div class="skill-card-circle1"></div>
+                <div class="skill-card-circle2"></div>
+            </div>
+            <div class="skill-card">
+                <h2>Other</h2>
+                <div class="skill-card-data">
+                    <p class="skill-tile skill-tile-dark">Github</p>
+      
+                </div>
+                <div class="skill-card-circle1"></div>
+                <div class="skill-card-circle2"></div>
             </div>
         </div>
-        <div id="page2"></div>
-        <div id="page3"></div>
-        <div id="page4"></div>
-        <div id="page5"></div>
-        <div id="page6"></div>
+      </div>
+      <div id="page6" class="page">
+        <footer>
+            <div class="circle footer-circle"></div>
+            <div id="footer-top">
+                <p>Got a project? Want to hire me?</p>
+                <h1>GET IN TOUCH</h1>
+            </div>
+            <div id="footer-mid"></div>
+            <div id="footer-bottom"></div>
+        </footer>
+      </div>
     </div>
-</body>
-</html> 
+  </body>
+</html>
