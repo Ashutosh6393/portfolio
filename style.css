@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #090908;
+  --secondary: #e8e8e3;
+  --gray-1: #393632;
+  --gray-2: #20201d;
+  --gray-3: #2e2e2b;
+  --gray-4: #756e64;
+  --gray-5: #d8d8d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: var(--gray-1);
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  padding-inline: 10rem;
+}
+
+/* -----page 1 css start ------ */
+
+#page1 {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  width: 8rem;
+  height: 8rem;
+  /* border: 1px solid black;; */
+  position: relative;
+
+  & #logo-circle-1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 7rem;
+    height: 7rem;
+    background: rgb(220, 220, 211);
+    background: linear-gradient(
+      180deg,
+      rgba(190, 190, 190, 1) 0%,
+      rgb(200, 200, 200) 100%
+    );
+    border-radius: 50%;
+  }
+  & #logo-circle-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: #D1D1C7;
+    border-radius: 50%;
+  }
+}
+
+nav {
+  width: 100%;
+  margin-top: 3rem;
+  padding-inline: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-right {
+  display: flex;
+  gap: 5rem;
+
+  & > h3 {
+    font-weight: 500;
+    color: var(--gray-4);
+  }
+}
+
+#navigation-menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & li h3 {
+
+    font-weight: 600;
+    color: var(--gray-1);
+  }
+}
+
+#page1-content {
+  position: relative;
+  margin-top: 10rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    font-size: 8vw;
+    display: inline-block;
+    width: fit-content;
+    line-height: 8vw;
+    letter-spacing: -0.4rem;
+    z-index: 2;
+  }
+  & h1:nth-child(1) {
+    align-self: flex-start;
+  }
+  & h1:nth-child(2) {
+    align-self: flex-end;
+  }
+
+  & p {
+    margin-top: 3rem;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: var(--gray-4);
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    z-index: 2;
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: rgb(220, 220, 211);
+  background: linear-gradient(
+    180deg,
+    rgba(220, 220, 211, 1) 0%,
+    rgba(232, 232, 227, 1) 100%
+  );
+  border-radius: 50%;
+  top: -50%;
+  z-index: 1;
+}
+
+/* ------ page 1 css end ------ */
