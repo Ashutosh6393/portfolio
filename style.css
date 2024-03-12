@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 100vh;
   padding-inline: 10rem;
+  z-index: 10;
 }
 
 .main-heading {
@@ -50,9 +51,10 @@ body {
     rgba(232, 232, 227, 1) 100%
   );
   border-radius: 50%;
-  top: -50%;
+  top: -55%;
   z-index: 1;
 }
+
 
 /* -----page 1 css start ------ */
 
@@ -64,17 +66,20 @@ body {
 }
 
 #logo {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   /* border: 1px solid black;; */
   position: relative;
+  transition: all ease-out 0.4s;
+  border-radius: 50%;
+  opacity: 1;
 
   & #logo-circle-1 {
     position: absolute;
     right: 0;
     top: 0;
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     background: rgb(220, 220, 211);
     background: linear-gradient(
       180deg,
@@ -87,8 +92,8 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     background-color: #d1d1c7;
     border-radius: 50%;
   }
@@ -96,15 +101,18 @@ body {
 
 nav {
   width: 100%;
+  /* height: auto; */
   margin-top: 3rem;
   padding-inline: 3rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 #nav-right {
   display: flex;
   gap: 5rem;
+  transition: all ease .4s;
 
   & > h3 {
     font-weight: 500;
@@ -118,10 +126,51 @@ nav {
   flex-direction: column;
   gap: 0.5rem;
 
+  & li {
+    position: relative;
+    overflow: hidden;
+  }
+
   & li h3 {
+    transition: all ease 0.5s;
+    position: relative;
     font-weight: 600;
     color: var(--gray-1);
   }
+}
+
+#navigation-menu li h3:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  font-weight: 600;
+  color: var(--gray-1);
+  transition: all ease 0.3s;
+}
+
+#navigation-menu li:nth-child(1) h3:after {
+  content: "About";
+}
+#navigation-menu li:nth-child(2) h3:after {
+  content: "Work";
+}
+#navigation-menu li:nth-child(3) h3:after {
+  content: "Projects";
+}
+#navigation-menu li:nth-child(4) h3:after {
+  content: "What I Know";
+}
+#navigation-menu li:nth-child(5) h3:after {
+  content: "Get In Touch";
+}
+#navigation-menu li:nth-child(6) h3:after {
+  content: "Download Resume";
+}
+
+#navigation-menu li:hover h3 {
+  transform: translateY(-100%);
 }
 
 #page1-content {
@@ -131,8 +180,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  & .page1-heading{
+    overflow: hidden;
+    z-index: 2;
+  }
 
-  & h1 {
+  & .page1-heading h1 {
     font-size: 8vw;
     display: inline-block;
     width: fit-content;
@@ -140,10 +193,10 @@ nav {
     letter-spacing: -0.4rem;
     z-index: 2;
   }
-  & h1:nth-child(1) {
+  & .page1-heading:nth-child(1) {
     align-self: flex-start;
   }
-  & h1:nth-child(2) {
+  & .page1-heading:nth-child(2) {
     align-self: flex-end;
   }
 
@@ -327,84 +380,84 @@ nav {
 .project-bottom-right {
   height: 100%;
   width: 50%;
-
 }
 
 .project-top-right,
-.project-bottom-left{
+.project-bottom-left {
   height: 70%;
   width: 40%;
 }
 
-.project-card-big-image{
+.project-card-big-image {
   height: 90%;
   width: 100%;
   background-color: #756e64;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
 }
 
-.project-card-big-content{
+.project-card-big-content {
   padding-block: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & h3{
+  & h3 {
     color: var(--gray-5);
     font-size: 2.5rem;
+    font-weight: 600;
   }
 }
 
-.project-card-tile-container{
+.project-card-tile-container {
   padding-inline: 1rem;
   display: flex;
   gap: 2rem;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-.tile-big{
-  padding-inline: 1.5rem ;
-  padding-block: .7rem;
+.tile-big {
+  padding-inline: 1.5rem;
+  padding-block: 0.7rem;
   font-size: 1.5rem;
   font-weight: 500;
   border-radius: 5rem;
 }
 
-.tile-small{
-  padding-inline: 1.1rem ;
-  padding-block: .3rem;
+.tile-small {
+  padding-inline: 1.2rem;
+  padding-block: 0.5rem;
   font-size: 1.1rem;
   font-weight: 500;
   border-radius: 5rem;
 }
 
-.tile-dark{
+.tile-dark {
   color: var(--gray-4);
   border: 1px solid var(--gray-4);
   background-color: var(--dark-bg);
 }
 
-.tile-light{
+.tile-light {
   background-color: var(--gray-5);
   border: 1px solid var(--gray-5);
-
 }
 
-.project-card-small-image{
+.project-card-small-image {
   height: 90%;
   width: 100%;
   background-color: #756e64;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
 }
 
-.project-card-small-content{
+.project-card-small-content {
   padding-block: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & h3{
+  & h3 {
     color: var(--gray-5);
     font-size: 1.8rem;
+    font-weight: 600;
   }
 }
 
@@ -412,15 +465,15 @@ nav {
 
 /* ------page5 css start------ */
 
-#page5{
+#page5 {
   height: auto;
   padding-block: 4rem;
-  & >h1{
+  & > h1 {
     color: var(--gray-1);
   }
 }
 
-#page5-content{
+#page5-content {
   margin-top: 2rem;
   border-top: 1px solid var(--gray-1);
   padding-block: 4rem;
@@ -429,63 +482,63 @@ nav {
   gap: 3rem;
 }
 
-.skill-card{
+.skill-card {
   background-color: #d1d1c7;
   padding-block: 4rem;
-  padding-inline: 2rem ;
+  padding-inline: 2rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
 
-  & h2{
+  & h2 {
     font-size: 3rem;
     color: var(--gray-3);
   }
 }
 
-.skill-card-data{
+.skill-card-data {
   padding-block: 2rem;
   width: 45%;
   display: flex;
   flex-wrap: wrap;
   gap: 1.6rem;
-  row-gap: .7rem;
+  row-gap: 0.7rem;
 }
 
-.skill-tile{
-  padding-inline: 1.5rem ;
-  padding-block: .7rem;
+.skill-tile {
+  padding-inline: 1.5rem;
+  padding-block: 0.7rem;
   font-size: 1.5rem;
   font-weight: 500;
   border-radius: 5rem;
 }
 
-.skill-tile-dark{
+.skill-tile-dark {
   color: var(--secondary);
   border: 1px solid var(--gray-3);
   background-color: var(--gray-3);
 }
 
-.skill-tile-light{
+.skill-tile-light {
   color: var(--gray-3);
   border: 1px solid var(--gray-3);
   background-color: var(--secondary);
 }
 
-.skill-card-circle1, .skill-card-circle2{
+.skill-card-circle1,
+.skill-card-circle2 {
   border-radius: 50%;
   position: absolute;
-
 }
 
-.skill-card-circle1{
+.skill-card-circle1 {
   height: 35rem;
   width: 35rem;
   background-color: #b1b1ac89;
   right: -10%;
   top: 20%;
 }
-.skill-card-circle2{
+.skill-card-circle2 {
   height: 35rem;
   width: 35rem;
   background-color: #b1b1acc8;
@@ -493,11 +546,10 @@ nav {
   top: -10%;
 }
 
-
 /* ------page5 css end------ */
 
-footer{
-  padding-block: 4rem ;
+footer {
+  padding-block: 4rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -505,11 +557,98 @@ footer{
   align-items: center;
 }
 
-.footer-circle{
-  top: 50%;
+.footer-circle {
+  top: 20%;
 }
 
-
-#footer-top{
+#footer-top {
+  margin-top: 3rem;
+  text-align: center;
+  /* background-color: var(--gray-4); */
   z-index: 2;
+  & h1 {
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 9rem;
+    position: relative;
+  }
+  & h1::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--gray-1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  & p {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+#footer-mid {
+  margin-top: 2rem;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  gap: 5rem;
+  padding-block: 3rem;
+  padding-inline: 8rem;
+}
+
+#footer-mid-left,
+#footer-mid-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  gap: 0.9rem;
+
+  & h3 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--gray-1);
+  }
+
+  & ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & li h6 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+}
+
+#footer-bottom {
+  margin-top: 3rem;
+  z-index: 2;
+}
+
+#footer-bottom {
+  width: 100%;
+  & > p {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding-block: 2rem;
+    font-weight: 700;
+  }
+}
+
+#footer-bottom-top {
+  display: flex;
+  justify-content: space-between;
+  & p {
+    font-size: 3rem;
+    font-weight: 700;
+  }
 }
